@@ -9,5 +9,5 @@
   6. ```vagrant ssh```
   7. ```cd /var/www/projects```
   8. ```django-admin startproject mysite```
-  9. #### Happy Coding
+  9. Happy Coding
 
