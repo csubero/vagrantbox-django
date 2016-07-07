@@ -3,11 +3,11 @@
 ## Installation
   1. Donwload Virtual box [Here](https://www.virtualbox.org/wiki/Downloads)
   2. Download Vagrant [Here](https://www.vagrantup.com/downloads.html)
-  3. Clone This repo in any place you like ```git clone https://github.com/oliveryepez/vagrantbox-django.git
-  4. ```cd /path/to/clone/repo
-  5. ```vagrant up
-  6. ``` vagrant ssh
-  7. ``` cd /var/www/projects
-  8. ``` django-admin startproject mysite
-  9. #### Hapyy Coding
+  3. Clone This repo in any place you like </b>git clone https://github.com/oliveryepez/vagrantbox-django.git</b>
+  4. <b>cd /path/to/clone/repo</b>
+  5. <b>vagrant up</b>
+  6. </b>vagrant ssh</b>
+  7. </b>cd /var/www/projects</b>
+  8. </b>django-admin startproject mysite</b>
+  9. #### Happy Coding
 
