@@ -23,7 +23,8 @@ Vagrant.configure(2) do |config|
 
   # Networking
   config.vm.network "private_network", ip: "10.10.1.101"
-
+  config.vm.network :forwarded_port, host: 8001, guest: 8000
+  
   # Sync folders
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.synced_folder "vagrant_config", "/home/vagrant/config"
