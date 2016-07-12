@@ -53,7 +53,7 @@ echo "|       Insatlling Python     |"
 echo "|      development packages   |" 
 echo "|                             |"
 echo "|-----------------------------|"
-apt-get install -y python-dev libmysqlclient-dev
+apt-get install -y python-dev libmysqlclient-dev python3.4-venv
 
 
 echo "|-----------------------------|"
