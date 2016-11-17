@@ -1,25 +1,5 @@
 #!/usr/bin/env bash
 
-
-
-# Remove old version of Python
-echo "|-----------------------------|"
-echo "|                             |"
-echo "|   Removing old version      |"
-echo "|   of Python                 |"
-echo "|                             |"
-echo "|-----------------------------|"
-rm /usr/bin/python
-
-
-echo "|-----------------------------|"
-echo "|                             |"
-echo "|  Use Python3 by Default     |"
-echo "|                             |"
-echo "|-----------------------------|"
-ln -s /usr/bin/python3 /usr/bin/python
-
-
 # Update repositories
 
 echo "|-----------------------------|"
@@ -67,6 +47,28 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 apt-get -y install mysql-server
 mysql -proot --execute="grant all privileges on *.* to 'root'@'%' identified by '1234';"
 
+
+echo "|-----------------------------|"
+echo "|                             |"
+echo "|       Insatlling RabbitMQ   |"
+echo "|                             |"
+echo "|-----------------------------|"
+sudo apt-get -y install rabbitmq-server
+
+echo "|-----------------------------|"
+echo "|                             |"
+echo "|       Insatlling REDIS      |"
+echo "|                             |"
+echo "|-----------------------------|"
+sudo apt-get -y install redis-server
+
+echo "|-----------------------------|"
+echo "|                             |"
+echo "|       Insatlling Supervisor |"
+echo "|                             |"
+echo "|-----------------------------|"
+sudo apt-get -y install supervisor
+
 echo "|-----------------------------|"
 echo "|                             |"
 echo "|       Insatlling MySQL      |"
@@ -76,6 +78,13 @@ echo "|-----------------------------|"
 pip3 install pymysql
 pip3 install mysqlclient
 
+echo "|-----------------------------|"
+echo "|                             |"
+echo "|       Insatlling            |"
+echo "|    VirtualEnvWrapper     	 "
+echo "|      					    |"
+echo "|-----------------------------|"
+pip3 install virtualenvwrapper
 
 echo "|-----------------------------|"
 echo "|                             |"

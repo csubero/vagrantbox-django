@@ -20,15 +20,16 @@ Vagrant.configure(2) do |config|
 
 # Box provision
   config.vm.provision :shell, path:"vagrant_config/install.sh"
+  config.vm.provision :shell, path:"vagrant_config/bootstrap.sh", run: 'always'
 
   # Networking
   config.vm.network "private_network", ip: "10.10.1.101"
   config.vm.network :forwarded_port, host: 8001, guest: 8000
-  
+
   # Sync folders
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.synced_folder "vagrant_config", "/home/vagrant/config"
-  config.vm.synced_folder "projects", "/var/www/projects", owner: "vagrant", group: "www-data", mount_options: ["dmode=777,fmode=777"]
+  config.vm.synced_folder "projects", "/var/www/projects", :type => "nfs", mount_options: ["nolock,vers=3,udp,noatime,actimeo=1"]
 
 
   # Plugins
